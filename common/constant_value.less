@@ -1,0 +1,25 @@
+@padding-space:40rpx;
+@color-bule:#1787fb;
+@qs-size:32rpx;
+@qs-onesize:34rpx;
+.qs-display(){
+	display: -webkit-flex;
+	display: flex;
+}
+.qs-justify-content(@value:space-between){
+	-webkit-justify-content: @value;
+	justify-content: @value;
+}
+.qs-linear-gradient(){
+	background: -webkit-linear-gradient(left, #4fc2fd , #1787fb); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #4fc2fd, #1787fb); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #4fc2fd, #1787fb); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #4fc2fd , #1787fb); /* 标准的语法 */
+}
+.qs-rota(@ra:45deg){
+	transform:rotate(@ra);
+	-ms-transform:rotate(@ra); 	/* IE 9 */
+	-moz-transform:rotate(@ra); 	/* Firefox */
+	-webkit-transform:rotate(@ra); /* Safari 和 Chrome */
+	-o-transform:rotate(@ra); 	/* Opera */
+}

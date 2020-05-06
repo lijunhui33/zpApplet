@@ -1,0 +1,298 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText":"首页"
+			}
+		},
+		{
+			"path": "pages/index/test",
+			"style": {
+				"navigationBarTitleText":"职位搜索"
+			}
+		},
+		{
+			"path": "pages/tidings/tidings",
+			"style": {
+				"navigationBarTitleText":"我的职聊",
+				"enablePullDownRefresh": true
+			}
+		}
+        ,{
+            "path" : "pages/resume/resume",
+            "style" : {
+				"navigationBarTitleText":"简历",
+				"enablePullDownRefresh": true
+			}
+        }
+        ,{
+            "path" : "pages/personal/personal",
+            "style" : {
+				"navigationBarTitleText":"会员中心",
+				"enablePullDownRefresh": true
+			}
+        }
+		,{
+		    "path" : "pages/index/job",
+		    "style" : {
+				"navigationBarTitleText":"职位搜索",
+				"enablePullDownRefresh": true
+			}
+		}
+		,{
+		    "path" : "pages/index/jobDetail",
+		    "style" : {
+				"navigationBarTitleText":"职位详情"
+			}
+		}
+		,{
+		    "path" : "pages/index/famousEnterprises",
+		    "style" : {
+				"navigationBarTitleText":"职位搜索",
+		    	"enablePullDownRefresh": true
+		    }
+		}
+		,{
+		    "path" : "pages/index/subscribe",
+		    "style" : {
+				"navigationBarTitleText":"订阅职位"
+			}
+		}
+		,{
+		    "path" : "pages/index/comDetail",
+		    "style" : {
+				"navigationBarTitleText":"企业详情"
+			}
+		}
+		,{
+		    "path" : "pages/tidings/myChat",
+		    "style" : {
+				"navigationBarTitleText":"我的职聊"
+			}
+		},
+		{
+		    "path" : "pages/index/famous",
+		    "style" : {
+				"navigationBarTitleText":"名企推荐",
+		    	"enablePullDownRefresh": true
+		    }
+		},
+		{
+            "path" : "pages/personal/shield",
+            "style" : {
+				"navigationBarTitleText":"屏蔽企业"
+			}
+        },
+		{
+		    "path" : "pages/personal/updatePwd",
+		    "style" : {
+				"navigationBarTitleText":"修改密码"
+			}
+		},
+		{
+		    "path" : "pages/personal/myApply",
+		    "style" : {
+				"navigationBarTitleText":"我的申请"
+			}
+		},
+		{
+		    "path" : "pages/personal/myAppreciate",
+		    "style" : {
+				"navigationBarTitleText":"对我感兴趣"
+			}
+		},
+		{
+		    "path" : "pages/personal/myCollect",
+		    "style" : {
+				"navigationBarTitleText":"我的收藏",
+				"backgroundColor":"#f5f5f5"
+			}
+		},
+		{
+		    "path" : "pages/personal/myInterview",
+		    "style" : {
+				"navigationBarTitleText":"面试邀请"
+			}
+		},
+		{
+		    "path" : "pages/resume/editPhoto",
+		    "style" : {
+				"navigationBarTitleText":"编辑照片作品"
+			}
+		},
+		{
+		    "path" : "pages/resume/editCertificate",
+		    "style" : {
+				"navigationBarTitleText":"编辑获得证书"
+			}
+		},
+		{
+		    "path" : "pages/resume/editBasic",
+		    "style" : {
+				"navigationBarTitleText":"编辑基本资料"
+			}
+		},
+		{
+		    "path" : "pages/resume/editEducation",
+		    "style" : {
+				"navigationBarTitleText":"编辑教育经历"
+			}
+		},
+		{
+		    "path" : "pages/resume/editExp",
+		    "style" : {
+				"navigationBarTitleText":"编辑工作经历"
+			}
+		},
+		{
+		    "path" : "pages/resume/editTrain",
+		    "style" : {
+				"navigationBarTitleText":"编辑培训经历"
+			}
+		},
+		{
+		    "path" : "pages/resume/editProject",
+		    "style" : {
+				"navigationBarTitleText":"编辑项目经历"
+			}
+		},
+		{
+		    "path" : "pages/resume/editLang",
+		    "style" : {
+				"navigationBarTitleText":"编辑语言能力"
+			}
+		},
+		{
+		    "path" : "pages/resume/editJobIntension",
+		    "style" : {
+				"navigationBarTitleText":"编辑求职意向"
+			}
+		},
+		{
+		    "path" : "pages/resume/editSpeciality",
+		    "style" : {
+				"navigationBarTitleText":"编辑特长标签"
+			}
+		},
+		{
+		    "path" : "pages/resume/addSpeciality",
+		    "style" : {
+				"navigationBarTitleText":"添加自定义标签"
+			}
+		},
+		{
+		    "path" : "pages/resume/editDesc",
+		    "style" : {
+				"navigationBarTitleText":"编辑自我描述"
+			}
+		},
+		{
+		    "path" : "pages/resume/jobSeekingManagement",
+		    "style" : {
+				"navigationBarTitleText":"求职管理",
+		    	"enablePullDownRefresh": true
+		    }
+		},
+		{
+		    "path" : "pages/personal/myLogin",
+		    "style" : {
+				"navigationBarTitleText":"会员登录",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+		    "path" : "pages/personal/myCode",
+		    "style" : {
+				"navigationBarTitleText":"会员登录"
+			}
+		},
+		{
+		    "path" : "pages/personal/myRegister",
+		    "style" : {
+				"navigationBarTitleText":"会员注册"
+			}
+		},
+		{
+		    "path" : "pages/resume/createResOne",
+		    "style" : {
+				"navigationBarTitleText":"创建简历 1/2"
+			}
+		},
+		{
+		    "path" : "pages/resume/createResTwo",
+		    "style" : {
+				"navigationBarTitleText":"创建简历 2/2"
+			}
+		},
+		{
+		    "path" : "pages/personal/myAccount",
+		    "style" : {
+				"navigationBarTitleText":"账号管理"
+			}
+		},
+		{
+		    "path" : "pages/personal/updatePhone",
+		    "style" : {
+				"navigationBarTitleText":"修改手机号"
+			}
+		},
+		{
+		    "path" : "pages/resume/editReport",
+		    "style" : {
+				"navigationBarTitleText":"举报职位"
+			}
+		},
+		{
+		    "path" : "pages/resume/myAttestation",
+		    "style" : {
+				"navigationBarTitleText":"企业实地认证报告"
+			}
+		}
+        ,{
+            "path" : "pages/index/bigMap/bigMap",
+            "style" : {
+				"navigationBarTitleText":"地图"
+			}
+        },
+		{
+		    "path" : "pages/tidings/bigImg",
+		    "style" : {
+				"navigationBarTitleText":"我的图片"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "旺才网演示",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar":{
+		"color": "#808080",
+		"selectedColor": "#1788fb",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/image/tab_channel_normal.png",
+			"selectedIconPath": "static/image/tab_channel_pressed.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/tidings/tidings",
+			"iconPath": "static/image/tab_message_normal.png",
+			"selectedIconPath": "static/image/tab_message_pressed.png",
+			"text": "消息"
+		}, {
+			"pagePath": "pages/resume/resume",
+			"iconPath": "static/image/tab_better_normal.png",
+			"selectedIconPath": "static/image/tab_better_pressed.png",
+			"text": "简历"
+		}, {
+			"pagePath": "pages/personal/personal",
+			"iconPath": "static/image/tab_my_normal.png",
+			"selectedIconPath": "static/image/tab_my_pressed.png",
+			"text": "我的"
+		}]
+	}
+}

@@ -1,0 +1,110 @@
+<include file="Admin@default/public/header" />
+<div class="toptip"  >
+<div class="toptit">提示：</div>
+<p class="link_green_line">网站接入微信小程序API后，平台企业用户可以使用微信小程序；接入微信小程序前，网站需首先进行申请，获得对应的微信小程序appid和appsecret(订阅功能需要订阅模板id)，以保证后续流程中背调模块的可用性。现在就去<a href="https://mp.weixin.qq.com/" target="_blank">[申请]</a></p>
+</div>
+<div class="toptit">基本配置</div>
+<form id="form1" action="{:U('edit')}" method="post" name="FormData" enctype="multipart/form-data">
+    <div class="form_main width200">
+        <div class="fl">小程序appid:</div>
+        <div class="fr">
+            <input name="weixinapp_appid" type="text" class="input_text_default" maxlength="100" value="{:C('qscms_weixinapp_appid')}"/>
+        </div>
+        <div class="fl">小程序appsecret:</div>
+        <div class="fr">
+            <input name="weixinapp_appsecret" type="text" class="input_text_default" maxlength="100" value="{:C('qscms_weixinapp_appsecret')}"/>
+        </div>
+        <div class="fl">小程序订阅模板id:</div>
+        <div class="fr">
+            <input name="weixinapp_template_id" type="text" class="input_text_default" maxlength="100" value="{:C('qscms_weixinapp_template_id')}"/>
+        </div>
+                <div class="fl">二维码图片：</div>
+        <div class="fr J-file-input-box">
+            <if condition="C('qscms_weixinapp_qrcode')">
+                <div class="file-input-src">
+                    <div class="img"><img src="{:attach(C('qscms_weixinapp_qrcode'),'images')}?_t={:time()}" align=absmiddle></div>
+                    <div class="del file-input-del" id="J_upload_weixin_img_btn" name="weixinapp_qrcode">点击更换</div>
+                </div>
+            <else/>
+                <div class="file-input-src hid">
+                    <div class="img"></div>
+                    <div class="del file-input-del" id="" name="weixinapp_qrcode">点击更换</div>
+                </div>
+                <div class="file-input-block" id="J_upload_weixin_img_btn" name="weixinapp_qrcode"><span class="o-txt">上传</span>小程序二维码</div>
+            </if>
+            <input type="hidden" class="file-input-save-name" name="weixinapp_qrcode" value="{:C('qscms_weixinapp_qrcode')}">
+        </div>
+        <div class="fl"></div>
+        <div class="fr">
+            <input type="button" class="admin_submit" value="保存" id="J_submit"/>
+           <!--  <input type="button" class="admin_submit" value="返回" onClick="history.go(-1)"/> -->
+        </div>
+        <div class="clear"></div>
+    </div>
+</form>
+
+</div>
+<include file="Admin@default/public/footer" />
+<script type="text/javascript">
+  var uploadUrl = "{:U('Admin/Upload/form_upload')}";
+</script>
+<script src="__ADMINPUBLIC__/js/ajaxfileupload.js"></script>
+<script src="__ADMINPUBLIC__/js/fileupload.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#J_submit').click(function(){
+            var that = $(this);
+            if(that.hasClass('disabled')){
+                return false;
+            }
+            that.val('正在保存...').addClass('disabled');
+            $.post("{:U('edit')}",$('#form1').serialize(),function(result){
+                if(result.status==1){
+                    disapperTooltip("success", result.msg,function(){
+                        location.href='{:U("index")}';
+                    });
+                }else{
+                    disapperTooltip("remind", result.msg,function(){
+                        that.val('保存').removeClass('disabled');
+                    });
+                    return false;
+                }
+            },'json');
+        });
+            // 微信小程序二维码图片
+          $.upload('#J_upload_weixin_img_btn',{name:'weixinapp_qrcode',dir:'images'},function(result){
+            if(result.error == 1){
+              var htmlResult = '<img src="'+ result.url.src +'" align=absmiddle>';
+              $('#J_upload_weixin_img_btn').closest('.J-file-input-box').find('.file-input-src .img').html(htmlResult);
+              $('#J_upload_weixin_img_btn').closest('.J-file-input-box').find('.file-input-save-name').val(result.url.savename);
+              if ($('#J_upload_weixin_img_btn').hasClass('file-input-block')) {
+                $('#J_upload_weixin_img_btn').closest('.J-file-input-box').find('.file-input-src').removeClass('hid');
+                var $delObj = $('#J_upload_weixin_img_btn').closest('.J-file-input-box').find('.file-input-del');
+                $('#J_upload_weixin_img_btn').remove();
+                $delObj.attr('id', "J_upload_weixin_img_change_btn");
+                $.upload('#J_upload_weixin_img_change_btn',{name:'weixinapp_qrcode',dir:'images'},function(result){
+                  if(result.error == 1){
+                    var htmlResult = '<img src="'+ result.url.src +'" align=absmiddle>';
+                    $('#J_upload_weixin_img_change_btn').closest('.J-file-input-box').find('.file-input-src .img').html(htmlResult);
+                    $('#J_upload_weixin_img_change_btn').closest('.J-file-input-box').find('.file-input-save-name').val(result.url.savename);
+                  } else {
+                    disapperTooltip("remind", "上传失败："+result.message);
+                  }
+                })
+              }
+            } else {
+              disapperTooltip("remind", "上传失败："+result.message);
+            }
+          })
+        });
+</script>
+</body>
+<if condition="C('qscms_weixinapp_top_color')">
+    <script type="text/javascript" >
+        var rgb="{:C('qscms_weixinapp_top_color')}";
+        document.FormData.weixinapp_top_color.value= rgb;
+        document.getElementById('tit_color').style.background=rgb;
+        document.getElementById('color_box').style.background=rgb;
+    </script>
+</if>
+</html>

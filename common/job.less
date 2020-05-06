@@ -1,0 +1,277 @@
+@import "constant_value";
+.jdheader{
+	padding: 0 @padding-space;
+	width: 670rpx;
+	.one{
+		font-size: 34rpx;
+		color: #333333;
+		line-height: 60rpx;
+	}
+	.two{
+		font-size: 32rpx;
+		color: #ff5c56;
+		line-height: 50rpx;
+	}
+	.three{
+		font-size: 28rpx;
+		color: #666666;
+		line-height: 50rpx;
+	}
+}
+.btnwrap{
+	.qs-display();
+	flex-flow: wrap;
+	margin-top: 20rpx;
+	.btn{
+		background: #f5f5f5;
+		color: #838383;
+		font-size: 24rpx;
+		padding: 4rpx 10rpx;
+		border-radius: 4rpx;
+		margin-right: 12rpx;
+		margin-top: 12rpx;
+	}
+}
+.loop(@counter) when (@counter > 0) {
+	.perimg@{counter}{
+		width: 58rpx;
+		height: 58rpx;
+		border: #FFFFFF solid 10rpx;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: (135rpx - @counter*29rpx); // 每次调用时产生的样式代码 50px 40px 30px 20px  10px
+	}
+	.loop((@counter - 1));    // 递归调用自身 4 3 2 1 0
+}
+.lookgroup{
+	.qs-display();
+	.qs-justify-content();
+	line-height: 80rpx;
+	.jubao{
+		.qs-display();
+		align-items: center;
+		image{
+			width: 30rpx;
+			height: 26rpx;
+		}
+		.word{
+			color: #1787fb;
+			font-size: 32rpx;
+			padding: 0 10rpx;
+		}
+	}
+	.person{
+		.qs-display();
+		align-items: center;
+		position: relative;
+		flex: 3;
+		.perpics{
+			.qs-display();
+			.loop(5);
+		}
+		.perlook{
+			color: #999999;
+			font-size: 32rpx;
+			position: absolute;
+			left: 188rpx;
+		}
+	}
+}
+.renzheng{
+	.qs-display();
+	background: #eef9ff;
+	margin-top: 16rpx;
+	image{
+		width: 99rpx;
+		height: 80rpx;
+		margin-right: 20rpx;
+	}
+	.group{
+		.qs-display();
+	}
+}
+
+.dcont{
+	padding: 30rpx @padding-space;
+	width: 670rpx;
+	.word{
+		color: #767676;
+		font-size: 28rpx;
+	}
+}
+
+.com_cont{
+	.qs-display();
+	font-size: @qs-size;
+	image{
+		width: 122rpx;
+		height: 102rpx;
+		margin-right: 20rpx;
+	}
+	.info{
+		.qs-display();
+		.qs-justify-content();
+		width: 100%;
+		align-items: center;
+		image{
+			width: 17rpx;
+			height: 30rpx;
+		}
+		.winfo{
+			line-height: 60rpx;
+			color: #666666;
+			width: 450rpx;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.view_com_name{
+			.qs-display();
+			align-items: center;
+			font-size: @qs-onesize;
+			image{
+				width: 30rpx;
+				height: 30rpx;
+				margin-left: 10rpx;
+			}
+		}
+	}
+}
+
+.zhiweituijian{
+	padding: 28rpx 0;
+	text-align: center;
+	background: #f5f5f5;
+	color: #a3a3a3;
+	font-size: @qs-size;
+}
+
+.footer{
+	position: fixed;
+	width: 100%;
+	height: 110rpx;
+	background: #ffffff;
+	border-top: #dfdfdf solid 1px;
+	bottom: 0;
+	left: 0;
+}
+.jdfooter{
+	.qs-display();
+	.qs-justify-content();
+	align-items: center;
+	padding: 15rpx @padding-space;
+	width: 670rpx;
+	font-size: 28rpx;
+	text-align: center;
+	.topimg{
+		width: 40rpx;
+		height: 40rpx;
+	}
+	.leftimg{
+		width: 218rpx;
+		height: 82rpx;
+	}
+	.livechat{
+		text-align: center;
+		font-size: 30rpx;
+		color: #FFFFFF;
+		line-height: 80rpx;
+		padding: 0 50rpx;
+		.qs-linear-gradient();
+		border-radius: 6rpx;
+		font-weight: bold;
+	}
+	.sendres{
+		text-align: center;
+		font-size: 30rpx;
+		color: #1b89fb;
+		line-height: 76rpx;
+		padding: 0 50rpx;
+		font-weight: bold;
+		border-radius: 6rpx;
+		border: 1rpx solid #1b89fb;
+	}
+	button{
+		background: #FFFFFF;
+		font-size: 28rpx;
+		line-height: 36rpx;
+		margin: 0;
+	}
+	button:after{
+		border: none;
+	}
+}
+.drift{
+	position: fixed;
+	width: 98rpx;
+	height: 98rpx;
+	bottom: 140rpx;
+	right: 40rpx;
+}
+.dftop{
+	position: fixed;
+	width: 88rpx;
+	padding: 49rpx 0;
+	background: #ffffff;
+	border-radius: 49rpx;
+	border: #eef6fd solid 5rpx;
+	bottom: 240rpx;
+	right: 40rpx;
+}
+.dfcont{
+	font-size: 28rpx;
+	color: #1787fb;
+	text-align: center;
+	image{
+		width: 40rpx;
+		height: 42rpx;
+	}
+	.cword{
+		margin-bottom: 30rpx;
+	}
+	.xiala{
+		width: 40rpx;
+		height: 24rpx;
+	}
+}
+.jdtitle{
+	font-size: 36rpx;
+	.qs-display();
+	.qs-justify-content();
+	padding-bottom: 20rpx;
+	align-items: center;
+	.one{
+		font-weight: bold;
+	}
+	.two{
+		font-size: 30rpx;
+		color: #aeaeae;
+	}
+}
+.nodebutton{
+	background: #FFFFFF;
+	.qs-display();
+	.qs-justify-content(space-around);
+}
+.nodebutton:after{
+	border: none;
+}
+.sharebutton{
+	.qs-display();
+	align-items: center;
+	font-size: @qs-onesize;
+	color: #FFFFFF;
+	background: #1787FB;
+	height: 100rpx;
+	width: 300rpx;
+	line-height: 100rpx;
+	border-radius: 50rpx;
+	margin-bottom: 100rpx;
+	image{
+		width: 30rpx;
+		height: 30rpx;
+		margin-left: 100rpx;
+		margin-right: 10rpx;
+	}
+}

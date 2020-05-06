@@ -1,0 +1,167 @@
+@import "constant_value";
+.test(){
+	width: 80rpx;
+	height: 8rpx;
+	border-radius: 4rpx;
+	margin: 18rpx auto 12rpx auto;
+}
+.allBottom(){
+	.qs-display();
+	.qs-justify-content();
+	background: #f6f6f6;
+	padding: 15rpx 20rpx;
+	font-size: 28rpx;
+	margin: 20rpx @padding-space;
+	border-radius: 10rpx;
+}
+.newOver(){
+	.qs-display();
+	.qs-justify-content();
+	align-items: center;
+}
+.tn_cont{
+	font-size: @qs-onesize;
+	text-align: center;
+	.one{
+		.qs-display();
+		align-items: center;
+		image{
+			width: 30rpx;
+			height: 18rpx;
+			margin-left: 12rpx;
+		}
+	}
+	.two{
+		.test();
+		background: #1787fb;
+	}
+	.three{
+		.test();
+		background: #FFFFFF;
+	}
+}
+.nav_cont{
+	.qs-display();
+	.qs-justify-content(space-around);
+}
+.jobone_cont{
+	font-size: @qs-size;
+	.bottom{
+		.allBottom();
+		color: #666666;
+		.yesint{
+			color: #08c37b;
+		}
+	}
+	.top_block{
+		.qs-display();
+		.qs-justify-content();
+		margin: 20rpx @padding-space;
+		.onew{
+			font-size: @qs-onesize;
+			color: #333333;
+			padding: 10rpx 0;
+		}
+		.twow{
+			color: #ff5c56;
+			padding: 10rpx 0;
+		}
+		.threew{
+			color: #aeaeae;
+			padding: 10rpx 0;
+		}
+		.five{
+			.qs-display();
+			align-items: center;
+			color: #999999;
+			image{
+				width: 32rpx;
+				height: 32rpx;
+				margin-right: 12rpx;
+			}
+		}
+		.four{
+			text-align: center;
+			color: #ef7a2c;
+			line-height: 110rpx;
+		}
+		.four_other{
+			text-align: center;
+			color: #cacaca;
+			line-height: 110rpx;
+		}
+		.owright{
+			text-align: center;
+			color: #9f9f9f;
+			padding: 16.5rpx 0;
+		}
+		.twright{
+			text-align: center;
+			color: #9f9f9f;
+			padding-bottom: 18rpx;
+			padding-top: 4rpx;
+		}
+	}
+	.bottom_other{
+		.allBottom();
+		color: #d2d2d2;
+	}
+	.over{
+		margin: 20rpx @padding-space;
+		.overBody{
+			.newOver();
+			.verticalLine{
+				color: #dbdbdb;
+				padding: 0 10rpx;
+			}
+		}
+		.onew{
+			font-size: @qs-onesize;
+			color: #333333;
+			padding: 10rpx 0;
+			flex: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.twow{
+			color: #ff5c56;
+			padding: 10rpx 0;
+			flex: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.threew{
+			color: #aeaeae;
+			padding: 10rpx 0;
+		}
+		.five{
+			.qs-display();
+			align-items: center;
+			color: #999999;
+			image{
+				width: 32rpx;
+				height: 32rpx;
+				margin-right: 12rpx;
+			}
+		}
+		.zhiliao{
+			color: #1787fb;
+			padding: 10rpx 40rpx;
+			border: #1787fb solid 1rpx;
+			font-size: 24rpx;
+			border-radius: 30rpx;
+		}
+	}
+}
+.popbox{
+	background: #FFFFFF;
+	padding: 10rpx 110rpx;
+	border-radius: 20rpx;
+}
+.selectPop{
+	background: #FFFFFF;
+	line-height: 100rpx;
+	text-align: center;
+}
